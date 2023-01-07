@@ -45,7 +45,11 @@ Farcaster是一个构建在以太坊上的去中心化网络，底层区块链La
 
 1. 安全、持久和友好的用户身份，比如`@alice`
 2. 用户之间的信息可以实时传递
-3. 在可控
+3. 以合理的成本访问去中心化网络上的所有数据
+
+用户首先在以太坊合约上注册一个公私/密钥对和一个ID。Farcaster中的一条信息必须包括ID和来自私钥对的签名，这使得它具有防篡改和自我认证的功能。信息的接受者可以在合约中查找与ID相关的密钥对，并验证信息的真实性。
+
+用户将签名的信息上传到Farcaster中心，这就像区块链网络中的一个节点。集线器通过点对点协议共享消息，每个集线器都存储网络上的所有消息。集线器使用delta图来达成关于网络状态的共识。由于更新是独立的操作，三角洲图无需协调就能达成共识，形成一个第二层的存储网络。
 
 Farcaster is a decentralized social network built on top of Ethereum. The Layer 1 blockchain manages user identities, while a Layer 2 network propagates updates between users. It offers:
 
